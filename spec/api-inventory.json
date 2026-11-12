@@ -1,0 +1,1265 @@
+{
+  "project": "goharbor/harbor",
+  "version": "2.16.0",
+  "license": "Apache-2.0",
+  "root": "api/v2.0/swagger.yaml",
+  "sourceSha256": "31b2704922bafe8eb95b840d2828661454ed1e3aa3cf7b4779249a18b6a54821",
+  "routeTreeSha256": "45aaa41355037890bc647b2932f80f6bfa7abd1511798a8a3fd4d07bb3cb6afb",
+  "extractor": "scripts/gen-operations.mjs walks swagger 2.0 paths and HTTP methods in api/v2.0/swagger.yaml",
+  "files": [
+    {
+      "path": "api/v2.0/swagger.yaml",
+      "sha256": "31b2704922bafe8eb95b840d2828661454ed1e3aa3cf7b4779249a18b6a54821"
+    }
+  ],
+  "routes": [
+    {
+      "method": "DELETE",
+      "path": "/api/v2.0/labels/{label_id}",
+      "operationId": "DeleteLabel",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v2.0/p2p/preheat/instances/{preheat_instance_name}",
+      "operationId": "DeleteInstance",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v2.0/projects/{project_name_or_id}",
+      "operationId": "deleteProject",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v2.0/projects/{project_name_or_id}/immutabletagrules/{immutable_rule_id}",
+      "operationId": "DeleteImmuRule",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v2.0/projects/{project_name_or_id}/members/{mid}",
+      "operationId": "deleteProjectMember",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v2.0/projects/{project_name_or_id}/metadatas/{meta_name}",
+      "operationId": "deleteProjectMetadata",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v2.0/projects/{project_name_or_id}/webhook/policies/{webhook_policy_id}",
+      "operationId": "DeleteWebhookPolicyOfProject",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v2.0/projects/{project_name}/preheat/policies/{preheat_policy_name}",
+      "operationId": "DeletePolicy",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v2.0/projects/{project_name}/repositories/{repository_name}",
+      "operationId": "deleteRepository",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v2.0/projects/{project_name}/repositories/{repository_name}/artifacts/{reference}",
+      "operationId": "deleteArtifact",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v2.0/projects/{project_name}/repositories/{repository_name}/artifacts/{reference}/labels/{label_id}",
+      "operationId": "removeLabel",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v2.0/projects/{project_name}/repositories/{repository_name}/artifacts/{reference}/tags/{tag_name}",
+      "operationId": "deleteTag",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v2.0/registries/{id}",
+      "operationId": "deleteRegistry",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v2.0/replication/policies/{id}",
+      "operationId": "deleteReplicationPolicy",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v2.0/retentions/{id}",
+      "operationId": "deleteRetention",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v2.0/robots/{robot_id}",
+      "operationId": "DeleteRobot",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v2.0/roles/{role_id}",
+      "operationId": "DeleteRole",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v2.0/scanners/{registration_id}",
+      "operationId": "deleteScanner",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v2.0/usergroups/{group_id}",
+      "operationId": "deleteUserGroup",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v2.0/users/{user_id}",
+      "operationId": "deleteUser",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/audit-logs",
+      "operationId": "listAuditLogs",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/auditlog-exts",
+      "operationId": "listAuditLogExts",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/auditlog-exts/events",
+      "operationId": "listAuditLogEventTypes",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/configurations",
+      "operationId": "getConfigurations",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/export/cve/download/{execution_id}",
+      "operationId": "downloadScanData",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/export/cve/execution/{execution_id}",
+      "operationId": "getScanDataExportExecution",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/export/cve/executions",
+      "operationId": "getScanDataExportExecutionList",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/health",
+      "operationId": "getHealth",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/icons/{digest}",
+      "operationId": "getIcon",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/internalconfig",
+      "operationId": "getInternalconfig",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/jobservice/jobs/{job_id}/log",
+      "operationId": "actionGetJobLog",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/jobservice/pools",
+      "operationId": "getWorkerPools",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/jobservice/pools/{pool_id}/workers",
+      "operationId": "getWorkers",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/jobservice/queues",
+      "operationId": "listJobQueues",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/labels",
+      "operationId": "ListLabels",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/labels/{label_id}",
+      "operationId": "GetLabelByID",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/ldap/groups/search",
+      "operationId": "searchLdapGroup",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/ldap/users/search",
+      "operationId": "searchLdapUser",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/p2p/preheat/instances",
+      "operationId": "ListInstances",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/p2p/preheat/instances/{preheat_instance_name}",
+      "operationId": "GetInstance",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/p2p/preheat/providers",
+      "operationId": "ListProviders",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/permissions",
+      "operationId": "getPermissions",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/ping",
+      "operationId": "getPing",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects",
+      "operationId": "listProjects",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name_or_id}",
+      "operationId": "getProject",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name_or_id}/_deletable",
+      "operationId": "getProjectDeletable",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name_or_id}/artifacts",
+      "operationId": "listArtifactsOfProject",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name_or_id}/immutabletagrules",
+      "operationId": "ListImmuRules",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name_or_id}/members",
+      "operationId": "listProjectMembers",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name_or_id}/members/{mid}",
+      "operationId": "getProjectMember",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name_or_id}/metadatas/",
+      "operationId": "listProjectMetadatas",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name_or_id}/metadatas/{meta_name}",
+      "operationId": "getProjectMetadata",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name_or_id}/scanner",
+      "operationId": "getScannerOfProject",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name_or_id}/scanner/candidates",
+      "operationId": "listScannerCandidatesOfProject",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name_or_id}/summary",
+      "operationId": "getProjectSummary",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name_or_id}/webhook/events",
+      "operationId": "GetSupportedEventTypes",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name_or_id}/webhook/jobs",
+      "operationId": "ListWebhookJobs",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name_or_id}/webhook/lasttrigger",
+      "operationId": "LastTrigger",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name_or_id}/webhook/policies",
+      "operationId": "ListWebhookPoliciesOfProject",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name_or_id}/webhook/policies/{webhook_policy_id}",
+      "operationId": "GetWebhookPolicyOfProject",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name_or_id}/webhook/policies/{webhook_policy_id}/executions",
+      "operationId": "ListExecutionsOfWebhookPolicy",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name_or_id}/webhook/policies/{webhook_policy_id}/executions/{execution_id}/tasks",
+      "operationId": "ListTasksOfWebhookExecution",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name_or_id}/webhook/policies/{webhook_policy_id}/executions/{execution_id}/tasks/{task_id}/log",
+      "operationId": "GetLogsOfWebhookTask",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name}/auditlog-exts",
+      "operationId": "getLogExts",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name}/logs",
+      "operationId": "getLogs",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name}/preheat/policies",
+      "operationId": "ListPolicies",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name}/preheat/policies/{preheat_policy_name}",
+      "operationId": "GetPolicy",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name}/preheat/policies/{preheat_policy_name}/executions",
+      "operationId": "ListExecutions",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name}/preheat/policies/{preheat_policy_name}/executions/{execution_id}",
+      "operationId": "GetExecution",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name}/preheat/policies/{preheat_policy_name}/executions/{execution_id}/tasks",
+      "operationId": "ListTasks",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name}/preheat/policies/{preheat_policy_name}/executions/{execution_id}/tasks/{task_id}/logs",
+      "operationId": "GetPreheatLog",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name}/preheat/providers",
+      "operationId": "ListProvidersUnderProject",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name}/repositories",
+      "operationId": "listRepositories",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name}/repositories/{repository_name}",
+      "operationId": "getRepository",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name}/repositories/{repository_name}/artifacts",
+      "operationId": "listArtifacts",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name}/repositories/{repository_name}/artifacts/{reference}",
+      "operationId": "getArtifact",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name}/repositories/{repository_name}/artifacts/{reference}/accessories",
+      "operationId": "listAccessories",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name}/repositories/{repository_name}/artifacts/{reference}/additions/{addition}",
+      "operationId": "getAddition",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name}/repositories/{repository_name}/artifacts/{reference}/additions/vulnerabilities",
+      "operationId": "getVulnerabilitiesAddition",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name}/repositories/{repository_name}/artifacts/{reference}/scan/{report_id}/log",
+      "operationId": "getReportLog",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name}/repositories/{repository_name}/artifacts/{reference}/tags",
+      "operationId": "listTags",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/quotas",
+      "operationId": "listQuotas",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/quotas/{id}",
+      "operationId": "getQuota",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/registries",
+      "operationId": "listRegistries",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/registries/{id}",
+      "operationId": "getRegistry",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/registries/{id}/info",
+      "operationId": "getRegistryInfo",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/replication/adapterinfos",
+      "operationId": "listRegistryProviderInfos",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/replication/adapters",
+      "operationId": "listRegistryProviderTypes",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/replication/executions",
+      "operationId": "listReplicationExecutions",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/replication/executions/{id}",
+      "operationId": "getReplicationExecution",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/replication/executions/{id}/tasks",
+      "operationId": "listReplicationTasks",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/replication/executions/{id}/tasks/{task_id}/log",
+      "operationId": "getReplicationLog",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/replication/policies",
+      "operationId": "listReplicationPolicies",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/replication/policies/{id}",
+      "operationId": "getReplicationPolicy",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/repositories",
+      "operationId": "listAllRepositories",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/retentions/{id}",
+      "operationId": "getRetention",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/retentions/{id}/executions",
+      "operationId": "listRetentionExecutions",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/retentions/{id}/executions/{eid}/tasks",
+      "operationId": "listRetentionTasks",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/retentions/{id}/executions/{eid}/tasks/{tid}",
+      "operationId": "getRetentionTaskLog",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/retentions/metadatas",
+      "operationId": "getRentenitionMetadata",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/robots",
+      "operationId": "ListRobot",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/robots/{robot_id}",
+      "operationId": "GetRobotByID",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/roles",
+      "operationId": "ListRole",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/roles/{role_id}",
+      "operationId": "GetRoleByID",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/scanners",
+      "operationId": "listScanners",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/scanners/{registration_id}",
+      "operationId": "getScanner",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/scanners/{registration_id}/metadata",
+      "operationId": "getScannerMetadata",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/scans/all/metrics",
+      "operationId": "getLatestScanAllMetrics",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/scans/schedule/metrics",
+      "operationId": "getLatestScheduledScanAllMetrics",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/schedules",
+      "operationId": "listSchedules",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/schedules/{job_type}/paused",
+      "operationId": "getSchedulePaused",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/search",
+      "operationId": "search",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/security/summary",
+      "operationId": "getSecuritySummary",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/security/vul",
+      "operationId": "ListVulnerabilities",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/statistics",
+      "operationId": "getStatistic",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/system/CVEAllowlist",
+      "operationId": "getSystemCVEAllowlist",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/system/gc",
+      "operationId": "getGCHistory",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/system/gc/{gc_id}",
+      "operationId": "getGC",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/system/gc/{gc_id}/log",
+      "operationId": "getGCLog",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/system/gc/schedule",
+      "operationId": "getGCSchedule",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/system/purgeaudit",
+      "operationId": "getPurgeHistory",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/system/purgeaudit/{purge_id}",
+      "operationId": "getPurgeJob",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/system/purgeaudit/{purge_id}/log",
+      "operationId": "getPurgeJobLog",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/system/purgeaudit/schedule",
+      "operationId": "getPurgeSchedule",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/system/scanAll/schedule",
+      "operationId": "getScanAllSchedule",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/systeminfo",
+      "operationId": "getSystemInfo",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/systeminfo/getcert",
+      "operationId": "getCert",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/systeminfo/volumes",
+      "operationId": "getVolumes",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/usergroups",
+      "operationId": "listUserGroups",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/usergroups/{group_id}",
+      "operationId": "getUserGroup",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/usergroups/search",
+      "operationId": "searchUserGroups",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/users",
+      "operationId": "listUsers",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/users/{user_id}",
+      "operationId": "getUser",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/users/current",
+      "operationId": "getCurrentUserInfo",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/users/current/permissions",
+      "operationId": "getCurrentUserPermissions",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/users/search",
+      "operationId": "searchUsers",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "HEAD",
+      "path": "/api/v2.0/projects",
+      "operationId": "headProject",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v2.0/projects/{project_name}/preheat/policies/{preheat_policy_name}/executions/{execution_id}",
+      "operationId": "StopExecution",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v2.0/retentions/{id}/executions/{eid}",
+      "operationId": "operateRetentionExecution",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v2.0/robots/{robot_id}",
+      "operationId": "RefreshSec",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v2.0/scanners/{registration_id}",
+      "operationId": "setScannerAsDefault",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/export/cve",
+      "operationId": "exportScanData",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/labels",
+      "operationId": "CreateLabel",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/ldap/ping",
+      "operationId": "pingLdap",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/ldap/users/import",
+      "operationId": "importLdapUser",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/p2p/preheat/instances",
+      "operationId": "CreateInstance",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/p2p/preheat/instances/ping",
+      "operationId": "PingInstances",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/projects",
+      "operationId": "createProject",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/projects/{project_name_or_id}/immutabletagrules",
+      "operationId": "CreateImmuRule",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/projects/{project_name_or_id}/members",
+      "operationId": "createProjectMember",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/projects/{project_name_or_id}/metadatas/",
+      "operationId": "addProjectMetadatas",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/projects/{project_name_or_id}/webhook/policies",
+      "operationId": "CreateWebhookPolicyOfProject",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/projects/{project_name}/preheat/policies",
+      "operationId": "CreatePolicy",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/projects/{project_name}/preheat/policies/{preheat_policy_name}",
+      "operationId": "ManualPreheat",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/projects/{project_name}/repositories/{repository_name}/artifacts",
+      "operationId": "CopyArtifact",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/projects/{project_name}/repositories/{repository_name}/artifacts/{reference}/labels",
+      "operationId": "addLabel",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/projects/{project_name}/repositories/{repository_name}/artifacts/{reference}/scan",
+      "operationId": "scanArtifact",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/projects/{project_name}/repositories/{repository_name}/artifacts/{reference}/scan/stop",
+      "operationId": "stopScanArtifact",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/projects/{project_name}/repositories/{repository_name}/artifacts/{reference}/tags",
+      "operationId": "createTag",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/registries",
+      "operationId": "createRegistry",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/registries/ping",
+      "operationId": "pingRegistry",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/replication/executions",
+      "operationId": "startReplication",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/replication/policies",
+      "operationId": "createReplicationPolicy",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/retentions",
+      "operationId": "createRetention",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/retentions/{id}/executions",
+      "operationId": "triggerRetentionExecution",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/robots",
+      "operationId": "CreateRobot",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/roles",
+      "operationId": "CreateRole",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/scanners",
+      "operationId": "createScanner",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/scanners/ping",
+      "operationId": "pingScanner",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/system/gc/schedule",
+      "operationId": "createGCSchedule",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/system/oidc/ping",
+      "operationId": "pingOIDC",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/system/purgeaudit/schedule",
+      "operationId": "createPurgeSchedule",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/system/scanAll/schedule",
+      "operationId": "createScanAllSchedule",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/system/scanAll/stop",
+      "operationId": "stopScanAll",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/usergroups",
+      "operationId": "createUserGroup",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/users",
+      "operationId": "createUser",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/configurations",
+      "operationId": "updateConfigurations",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/jobservice/jobs/{job_id}",
+      "operationId": "stopRunningJob",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/jobservice/queues/{job_type}",
+      "operationId": "actionPendingJobs",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/labels/{label_id}",
+      "operationId": "UpdateLabel",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/p2p/preheat/instances/{preheat_instance_name}",
+      "operationId": "UpdateInstance",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/projects/{project_name_or_id}",
+      "operationId": "updateProject",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/projects/{project_name_or_id}/immutabletagrules/{immutable_rule_id}",
+      "operationId": "UpdateImmuRule",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/projects/{project_name_or_id}/members/{mid}",
+      "operationId": "updateProjectMember",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/projects/{project_name_or_id}/metadatas/{meta_name}",
+      "operationId": "updateProjectMetadata",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/projects/{project_name_or_id}/scanner",
+      "operationId": "setScannerOfProject",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/projects/{project_name_or_id}/webhook/policies/{webhook_policy_id}",
+      "operationId": "UpdateWebhookPolicyOfProject",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/projects/{project_name}/preheat/policies/{preheat_policy_name}",
+      "operationId": "UpdatePolicy",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/projects/{project_name}/repositories/{repository_name}",
+      "operationId": "updateRepository",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/quotas/{id}",
+      "operationId": "updateQuota",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/registries/{id}",
+      "operationId": "updateRegistry",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/replication/executions/{id}",
+      "operationId": "stopReplication",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/replication/policies/{id}",
+      "operationId": "updateReplicationPolicy",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/retentions/{id}",
+      "operationId": "updateRetention",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/robots/{robot_id}",
+      "operationId": "UpdateRobot",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/roles/{role_id}",
+      "operationId": "UpdateRole",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/scanners/{registration_id}",
+      "operationId": "updateScanner",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/system/CVEAllowlist",
+      "operationId": "putSystemCVEAllowlist",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/system/gc/{gc_id}",
+      "operationId": "stopGC",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/system/gc/schedule",
+      "operationId": "updateGCSchedule",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/system/purgeaudit/{purge_id}",
+      "operationId": "stopPurge",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/system/purgeaudit/schedule",
+      "operationId": "updatePurgeSchedule",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/system/scanAll/schedule",
+      "operationId": "updateScanAllSchedule",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/usergroups/{group_id}",
+      "operationId": "updateUserGroup",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/users/{user_id}",
+      "operationId": "updateUserProfile",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/users/{user_id}/cli_secret",
+      "operationId": "setCliSecret",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/users/{user_id}/password",
+      "operationId": "updateUserPassword",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/users/{user_id}/sysadmin",
+      "operationId": "setUserSysAdmin",
+      "sourceFile": "api/v2.0/swagger.yaml"
+    }
+  ]
+}

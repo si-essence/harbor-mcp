@@ -1,0 +1,1930 @@
+{
+  "source": {
+    "project": "goharbor/harbor",
+    "version": "2.16.0",
+    "license": "Apache-2.0",
+    "root": "api/v2.0/swagger.yaml",
+    "sourceSha256": "31b2704922bafe8eb95b840d2828661454ed1e3aa3cf7b4779249a18b6a54821",
+    "routeTreeSha256": "45aaa41355037890bc647b2932f80f6bfa7abd1511798a8a3fd4d07bb3cb6afb",
+    "files": [
+      {
+        "path": "api/v2.0/swagger.yaml",
+        "sha256": "31b2704922bafe8eb95b840d2828661454ed1e3aa3cf7b4779249a18b6a54821"
+      }
+    ]
+  },
+  "operations": [
+    {
+      "method": "DELETE",
+      "path": "/api/v2.0/labels/{label_id}",
+      "operationId": "DeleteLabel",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_admin",
+      "action": "label_delete",
+      "write": true,
+      "destructive": true,
+      "summary": "Delete a label."
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v2.0/p2p/preheat/instances/{preheat_instance_name}",
+      "operationId": "DeleteInstance",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "P2P preheat instance administration is excluded."
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v2.0/projects/{project_name_or_id}",
+      "operationId": "deleteProject",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_projects",
+      "action": "delete",
+      "write": true,
+      "destructive": true,
+      "summary": "Delete a project and its repositories."
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v2.0/projects/{project_name_or_id}/immutabletagrules/{immutable_rule_id}",
+      "operationId": "DeleteImmuRule",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Immutable tag rule administration is excluded from lean coverage."
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v2.0/projects/{project_name_or_id}/members/{mid}",
+      "operationId": "deleteProjectMember",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_projects",
+      "action": "member_remove",
+      "write": true,
+      "destructive": true,
+      "summary": "Remove a project member."
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v2.0/projects/{project_name_or_id}/metadatas/{meta_name}",
+      "operationId": "deleteProjectMetadata",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_projects",
+      "action": "metadata_delete",
+      "write": true,
+      "destructive": true,
+      "summary": "Delete one project metadata entry."
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v2.0/projects/{project_name_or_id}/webhook/policies/{webhook_policy_id}",
+      "operationId": "DeleteWebhookPolicyOfProject",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Webhook policy writes, executions, jobs, and logs are excluded. List and events are mapped."
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v2.0/projects/{project_name}/preheat/policies/{preheat_policy_name}",
+      "operationId": "DeletePolicy",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Project P2P preheat policies and executions are excluded."
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v2.0/projects/{project_name}/repositories/{repository_name}",
+      "operationId": "deleteRepository",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_repositories",
+      "action": "delete",
+      "write": true,
+      "destructive": true,
+      "summary": "Delete a repository and its artifacts."
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v2.0/projects/{project_name}/repositories/{repository_name}/artifacts/{reference}",
+      "operationId": "deleteArtifact",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_artifacts",
+      "action": "delete",
+      "write": true,
+      "destructive": true,
+      "summary": "Delete an artifact."
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v2.0/projects/{project_name}/repositories/{repository_name}/artifacts/{reference}/labels/{label_id}",
+      "operationId": "removeLabel",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_artifacts",
+      "action": "label_remove",
+      "write": true,
+      "destructive": true,
+      "summary": "Detach a label from an artifact."
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v2.0/projects/{project_name}/repositories/{repository_name}/artifacts/{reference}/tags/{tag_name}",
+      "operationId": "deleteTag",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_artifacts",
+      "action": "tag_delete",
+      "write": true,
+      "destructive": true,
+      "summary": "Delete a tag from an artifact."
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v2.0/registries/{id}",
+      "operationId": "deleteRegistry",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Replication registry credentials are excluded."
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v2.0/replication/policies/{id}",
+      "operationId": "deleteReplicationPolicy",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Replication policies and executions are excluded. They involve remote registries."
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v2.0/retentions/{id}",
+      "operationId": "deleteRetention",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Retention policy writes and executions are excluded. Metadata and get are mapped."
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v2.0/robots/{robot_id}",
+      "operationId": "DeleteRobot",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_robots",
+      "action": "delete",
+      "write": true,
+      "destructive": true,
+      "summary": "Delete a robot account."
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v2.0/roles/{role_id}",
+      "operationId": "DeleteRole",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "RBAC role catalog administration is excluded."
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v2.0/scanners/{registration_id}",
+      "operationId": "deleteScanner",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Scanner registration, including credentials, is excluded."
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v2.0/usergroups/{group_id}",
+      "operationId": "deleteUserGroup",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "User group administration is excluded."
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v2.0/users/{user_id}",
+      "operationId": "deleteUser",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "User directory, password, CLI secret, and sysadmin writes are excluded. current user is mapped."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/audit-logs",
+      "operationId": "listAuditLogs",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Instance audit log listing is excluded from lean coverage."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/auditlog-exts",
+      "operationId": "listAuditLogExts",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Extended audit log listing is excluded from lean coverage."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/auditlog-exts/events",
+      "operationId": "listAuditLogEventTypes",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Extended audit log listing is excluded from lean coverage."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/configurations",
+      "operationId": "getConfigurations",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "System configuration get/update is excluded. It exposes and writes instance secrets."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/export/cve/download/{execution_id}",
+      "operationId": "downloadScanData",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "CVE export jobs and binary downloads are excluded."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/export/cve/execution/{execution_id}",
+      "operationId": "getScanDataExportExecution",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "CVE export jobs and binary downloads are excluded."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/export/cve/executions",
+      "operationId": "getScanDataExportExecutionList",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "CVE export jobs and binary downloads are excluded."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/health",
+      "operationId": "getHealth",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_system",
+      "action": "health",
+      "write": false,
+      "destructive": false,
+      "summary": "Health of Harbor components."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/icons/{digest}",
+      "operationId": "getIcon",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Raw icon binary endpoints are excluded."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/internalconfig",
+      "operationId": "getInternalconfig",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Internal config dump is excluded. It is not a user management call."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/jobservice/jobs/{job_id}/log",
+      "operationId": "actionGetJobLog",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Jobservice worker, queue, and job-stop administration is excluded."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/jobservice/pools",
+      "operationId": "getWorkerPools",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Jobservice worker, queue, and job-stop administration is excluded."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/jobservice/pools/{pool_id}/workers",
+      "operationId": "getWorkers",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Jobservice worker, queue, and job-stop administration is excluded."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/jobservice/queues",
+      "operationId": "listJobQueues",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Jobservice worker, queue, and job-stop administration is excluded."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/labels",
+      "operationId": "ListLabels",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_admin",
+      "action": "labels_list",
+      "write": false,
+      "destructive": false,
+      "summary": "List labels."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/labels/{label_id}",
+      "operationId": "GetLabelByID",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_admin",
+      "action": "label_get",
+      "write": false,
+      "destructive": false,
+      "summary": "Get one label."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/ldap/groups/search",
+      "operationId": "searchLdapGroup",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "LDAP administration is excluded from the management toolset."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/ldap/users/search",
+      "operationId": "searchLdapUser",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "LDAP administration is excluded from the management toolset."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/p2p/preheat/instances",
+      "operationId": "ListInstances",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "P2P preheat instance administration is excluded."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/p2p/preheat/instances/{preheat_instance_name}",
+      "operationId": "GetInstance",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "P2P preheat instance administration is excluded."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/p2p/preheat/providers",
+      "operationId": "ListProviders",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "P2P preheat instance administration is excluded."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/permissions",
+      "operationId": "getPermissions",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "The permissions catalog is excluded. current_permissions is mapped."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/ping",
+      "operationId": "getPing",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_system",
+      "action": "ping",
+      "write": false,
+      "destructive": false,
+      "summary": "Liveness ping."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects",
+      "operationId": "listProjects",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_projects",
+      "action": "list",
+      "write": false,
+      "destructive": false,
+      "summary": "List projects visible to the user."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name_or_id}",
+      "operationId": "getProject",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_projects",
+      "action": "get",
+      "write": false,
+      "destructive": false,
+      "summary": "Get one project."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name_or_id}/_deletable",
+      "operationId": "getProjectDeletable",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_projects",
+      "action": "deletable",
+      "write": false,
+      "destructive": false,
+      "summary": "Whether the project can be deleted."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name_or_id}/artifacts",
+      "operationId": "listArtifactsOfProject",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Copy-artifact, scan-stop, report logs, and generic additions are excluded. Core artifact calls are mapped."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name_or_id}/immutabletagrules",
+      "operationId": "ListImmuRules",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Immutable tag rule administration is excluded from lean coverage."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name_or_id}/members",
+      "operationId": "listProjectMembers",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_projects",
+      "action": "members_list",
+      "write": false,
+      "destructive": false,
+      "summary": "List project members."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name_or_id}/members/{mid}",
+      "operationId": "getProjectMember",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_projects",
+      "action": "member_get",
+      "write": false,
+      "destructive": false,
+      "summary": "Get one project member."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name_or_id}/metadatas/",
+      "operationId": "listProjectMetadatas",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_projects",
+      "action": "metadata_list",
+      "write": false,
+      "destructive": false,
+      "summary": "List project metadata."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name_or_id}/metadatas/{meta_name}",
+      "operationId": "getProjectMetadata",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_projects",
+      "action": "metadata_get",
+      "write": false,
+      "destructive": false,
+      "summary": "Get one project metadata entry."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name_or_id}/scanner",
+      "operationId": "getScannerOfProject",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Per-project scanner assignment is excluded. Scanner registration is also excluded."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name_or_id}/scanner/candidates",
+      "operationId": "listScannerCandidatesOfProject",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Per-project scanner assignment is excluded. Scanner registration is also excluded."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name_or_id}/summary",
+      "operationId": "getProjectSummary",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_projects",
+      "action": "summary",
+      "write": false,
+      "destructive": false,
+      "summary": "Project summary including repo counts and quotas."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name_or_id}/webhook/events",
+      "operationId": "GetSupportedEventTypes",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_admin",
+      "action": "webhook_events",
+      "write": false,
+      "destructive": false,
+      "summary": "Supported webhook event types."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name_or_id}/webhook/jobs",
+      "operationId": "ListWebhookJobs",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Webhook policy writes, executions, jobs, and logs are excluded. List and events are mapped."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name_or_id}/webhook/lasttrigger",
+      "operationId": "LastTrigger",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Webhook policy writes, executions, jobs, and logs are excluded. List and events are mapped."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name_or_id}/webhook/policies",
+      "operationId": "ListWebhookPoliciesOfProject",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_admin",
+      "action": "webhook_list",
+      "write": false,
+      "destructive": false,
+      "summary": "List webhook policies for a project."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name_or_id}/webhook/policies/{webhook_policy_id}",
+      "operationId": "GetWebhookPolicyOfProject",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Webhook policy writes, executions, jobs, and logs are excluded. List and events are mapped."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name_or_id}/webhook/policies/{webhook_policy_id}/executions",
+      "operationId": "ListExecutionsOfWebhookPolicy",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Webhook policy writes, executions, jobs, and logs are excluded. List and events are mapped."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name_or_id}/webhook/policies/{webhook_policy_id}/executions/{execution_id}/tasks",
+      "operationId": "ListTasksOfWebhookExecution",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Webhook policy writes, executions, jobs, and logs are excluded. List and events are mapped."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name_or_id}/webhook/policies/{webhook_policy_id}/executions/{execution_id}/tasks/{task_id}/log",
+      "operationId": "GetLogsOfWebhookTask",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Webhook policy writes, executions, jobs, and logs are excluded. List and events are mapped."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name}/auditlog-exts",
+      "operationId": "getLogExts",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Extended audit log listing is excluded from lean coverage."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name}/logs",
+      "operationId": "getLogs",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Project audit logs are excluded from lean coverage."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name}/preheat/policies",
+      "operationId": "ListPolicies",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Project P2P preheat policies and executions are excluded."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name}/preheat/policies/{preheat_policy_name}",
+      "operationId": "GetPolicy",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Project P2P preheat policies and executions are excluded."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name}/preheat/policies/{preheat_policy_name}/executions",
+      "operationId": "ListExecutions",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Project P2P preheat policies and executions are excluded."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name}/preheat/policies/{preheat_policy_name}/executions/{execution_id}",
+      "operationId": "GetExecution",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Project P2P preheat policies and executions are excluded."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name}/preheat/policies/{preheat_policy_name}/executions/{execution_id}/tasks",
+      "operationId": "ListTasks",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Project P2P preheat policies and executions are excluded."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name}/preheat/policies/{preheat_policy_name}/executions/{execution_id}/tasks/{task_id}/logs",
+      "operationId": "GetPreheatLog",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Project P2P preheat policies and executions are excluded."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name}/preheat/providers",
+      "operationId": "ListProvidersUnderProject",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Project P2P preheat policies and executions are excluded."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name}/repositories",
+      "operationId": "listRepositories",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_repositories",
+      "action": "list",
+      "write": false,
+      "destructive": false,
+      "summary": "List repositories in a project."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name}/repositories/{repository_name}",
+      "operationId": "getRepository",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_repositories",
+      "action": "get",
+      "write": false,
+      "destructive": false,
+      "summary": "Get one repository. repository_name is double-URL-encoded."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name}/repositories/{repository_name}/artifacts",
+      "operationId": "listArtifacts",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_artifacts",
+      "action": "list",
+      "write": false,
+      "destructive": false,
+      "summary": "List artifacts in a repository."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name}/repositories/{repository_name}/artifacts/{reference}",
+      "operationId": "getArtifact",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_artifacts",
+      "action": "get",
+      "write": false,
+      "destructive": false,
+      "summary": "Get one artifact by digest or tag."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name}/repositories/{repository_name}/artifacts/{reference}/accessories",
+      "operationId": "listAccessories",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_artifacts",
+      "action": "accessories",
+      "write": false,
+      "destructive": false,
+      "summary": "List accessory artifacts such as signatures."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name}/repositories/{repository_name}/artifacts/{reference}/additions/{addition}",
+      "operationId": "getAddition",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Copy-artifact, scan-stop, report logs, and generic additions are excluded. Core artifact calls are mapped."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name}/repositories/{repository_name}/artifacts/{reference}/additions/vulnerabilities",
+      "operationId": "getVulnerabilitiesAddition",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_artifacts",
+      "action": "vulns",
+      "write": false,
+      "destructive": false,
+      "summary": "Read the vulnerability addition for an artifact."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name}/repositories/{repository_name}/artifacts/{reference}/scan/{report_id}/log",
+      "operationId": "getReportLog",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Copy-artifact, scan-stop, report logs, and generic additions are excluded. Core artifact calls are mapped."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/projects/{project_name}/repositories/{repository_name}/artifacts/{reference}/tags",
+      "operationId": "listTags",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_artifacts",
+      "action": "tags_list",
+      "write": false,
+      "destructive": false,
+      "summary": "List tags on an artifact."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/quotas",
+      "operationId": "listQuotas",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_admin",
+      "action": "quotas_list",
+      "write": false,
+      "destructive": false,
+      "summary": "List project quotas."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/quotas/{id}",
+      "operationId": "getQuota",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_admin",
+      "action": "quota_get",
+      "write": false,
+      "destructive": false,
+      "summary": "Get one quota."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/registries",
+      "operationId": "listRegistries",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Replication registry credentials are excluded."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/registries/{id}",
+      "operationId": "getRegistry",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Replication registry credentials are excluded."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/registries/{id}/info",
+      "operationId": "getRegistryInfo",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Replication registry credentials are excluded."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/replication/adapterinfos",
+      "operationId": "listRegistryProviderInfos",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Replication policies and executions are excluded. They involve remote registries."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/replication/adapters",
+      "operationId": "listRegistryProviderTypes",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Replication policies and executions are excluded. They involve remote registries."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/replication/executions",
+      "operationId": "listReplicationExecutions",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Replication policies and executions are excluded. They involve remote registries."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/replication/executions/{id}",
+      "operationId": "getReplicationExecution",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Replication policies and executions are excluded. They involve remote registries."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/replication/executions/{id}/tasks",
+      "operationId": "listReplicationTasks",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Replication policies and executions are excluded. They involve remote registries."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/replication/executions/{id}/tasks/{task_id}/log",
+      "operationId": "getReplicationLog",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Replication policies and executions are excluded. They involve remote registries."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/replication/policies",
+      "operationId": "listReplicationPolicies",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Replication policies and executions are excluded. They involve remote registries."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/replication/policies/{id}",
+      "operationId": "getReplicationPolicy",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Replication policies and executions are excluded. They involve remote registries."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/repositories",
+      "operationId": "listAllRepositories",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_repositories",
+      "action": "list_all",
+      "write": false,
+      "destructive": false,
+      "summary": "List repositories across projects."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/retentions/{id}",
+      "operationId": "getRetention",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_admin",
+      "action": "retention_get",
+      "write": false,
+      "destructive": false,
+      "summary": "Get a retention policy."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/retentions/{id}/executions",
+      "operationId": "listRetentionExecutions",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Retention policy writes and executions are excluded. Metadata and get are mapped."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/retentions/{id}/executions/{eid}/tasks",
+      "operationId": "listRetentionTasks",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Retention policy writes and executions are excluded. Metadata and get are mapped."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/retentions/{id}/executions/{eid}/tasks/{tid}",
+      "operationId": "getRetentionTaskLog",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Retention policy writes and executions are excluded. Metadata and get are mapped."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/retentions/metadatas",
+      "operationId": "getRentenitionMetadata",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_admin",
+      "action": "retention_metadata",
+      "write": false,
+      "destructive": false,
+      "summary": "Retention policy metadata (supported algorithms and tags)."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/robots",
+      "operationId": "ListRobot",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_robots",
+      "action": "list",
+      "write": false,
+      "destructive": false,
+      "summary": "List robot accounts."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/robots/{robot_id}",
+      "operationId": "GetRobotByID",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_robots",
+      "action": "get",
+      "write": false,
+      "destructive": false,
+      "summary": "Get one robot account."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/roles",
+      "operationId": "ListRole",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "RBAC role catalog administration is excluded."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/roles/{role_id}",
+      "operationId": "GetRoleByID",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "RBAC role catalog administration is excluded."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/scanners",
+      "operationId": "listScanners",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Scanner registration, including credentials, is excluded."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/scanners/{registration_id}",
+      "operationId": "getScanner",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Scanner registration, including credentials, is excluded."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/scanners/{registration_id}/metadata",
+      "operationId": "getScannerMetadata",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Scanner registration, including credentials, is excluded."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/scans/all/metrics",
+      "operationId": "getLatestScanAllMetrics",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Scan-all metrics are excluded. Per-artifact scan is mapped."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/scans/schedule/metrics",
+      "operationId": "getLatestScheduledScanAllMetrics",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Scheduled scan-all metrics are excluded."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/schedules",
+      "operationId": "listSchedules",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Global job schedule pause catalog is excluded. GC schedule is mapped."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/schedules/{job_type}/paused",
+      "operationId": "getSchedulePaused",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Global job schedule pause catalog is excluded. GC schedule is mapped."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/search",
+      "operationId": "search",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_system",
+      "action": "search",
+      "write": false,
+      "destructive": false,
+      "summary": "Search projects and repositories."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/security/summary",
+      "operationId": "getSecuritySummary",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Security hub summary and vulnerability search are excluded from lean coverage."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/security/vul",
+      "operationId": "ListVulnerabilities",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Security hub summary and vulnerability search are excluded from lean coverage."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/statistics",
+      "operationId": "getStatistic",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_system",
+      "action": "statistics",
+      "write": false,
+      "destructive": false,
+      "summary": "Project and repository statistics."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/system/CVEAllowlist",
+      "operationId": "getSystemCVEAllowlist",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "System CVE allowlist administration is excluded."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/system/gc",
+      "operationId": "getGCHistory",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_admin",
+      "action": "gc_history",
+      "write": false,
+      "destructive": false,
+      "summary": "Garbage collection job history."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/system/gc/{gc_id}",
+      "operationId": "getGC",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Per-job GC stop and log endpoints are excluded. Schedule and history are mapped."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/system/gc/{gc_id}/log",
+      "operationId": "getGCLog",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Per-job GC stop and log endpoints are excluded. Schedule and history are mapped."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/system/gc/schedule",
+      "operationId": "getGCSchedule",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_admin",
+      "action": "gc_schedule",
+      "write": false,
+      "destructive": false,
+      "summary": "Read the garbage collection schedule."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/system/purgeaudit",
+      "operationId": "getPurgeHistory",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Audit log purge jobs are excluded from lean coverage."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/system/purgeaudit/{purge_id}",
+      "operationId": "getPurgeJob",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Audit log purge jobs are excluded from lean coverage."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/system/purgeaudit/{purge_id}/log",
+      "operationId": "getPurgeJobLog",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Audit log purge jobs are excluded from lean coverage."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/system/purgeaudit/schedule",
+      "operationId": "getPurgeSchedule",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Audit log purge jobs are excluded from lean coverage."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/system/scanAll/schedule",
+      "operationId": "getScanAllSchedule",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Instance-wide scan-all schedule and stop are excluded. Per-artifact scan is mapped."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/systeminfo",
+      "operationId": "getSystemInfo",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_system",
+      "action": "systeminfo",
+      "write": false,
+      "destructive": false,
+      "summary": "Public system information."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/systeminfo/getcert",
+      "operationId": "getCert",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Raw certificate download is excluded. systeminfo JSON is mapped."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/systeminfo/volumes",
+      "operationId": "getVolumes",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_system",
+      "action": "volumes",
+      "write": false,
+      "destructive": false,
+      "summary": "System volume capacity."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/usergroups",
+      "operationId": "listUserGroups",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "User group administration is excluded."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/usergroups/{group_id}",
+      "operationId": "getUserGroup",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "User group administration is excluded."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/usergroups/search",
+      "operationId": "searchUserGroups",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "User group administration is excluded."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/users",
+      "operationId": "listUsers",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "User directory, password, CLI secret, and sysadmin writes are excluded. current user is mapped."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/users/{user_id}",
+      "operationId": "getUser",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "User directory, password, CLI secret, and sysadmin writes are excluded. current user is mapped."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/users/current",
+      "operationId": "getCurrentUserInfo",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_system",
+      "action": "current_user",
+      "write": false,
+      "destructive": false,
+      "summary": "Authenticated user profile."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/users/current/permissions",
+      "operationId": "getCurrentUserPermissions",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_system",
+      "action": "current_permissions",
+      "write": false,
+      "destructive": false,
+      "summary": "Permissions of the authenticated user."
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2.0/users/search",
+      "operationId": "searchUsers",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "User directory, password, CLI secret, and sysadmin writes are excluded. current user is mapped."
+    },
+    {
+      "method": "HEAD",
+      "path": "/api/v2.0/projects",
+      "operationId": "headProject",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "HEAD probes are excluded. JSON GET/POST coverage is mapped instead."
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v2.0/projects/{project_name}/preheat/policies/{preheat_policy_name}/executions/{execution_id}",
+      "operationId": "StopExecution",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Project P2P preheat policies and executions are excluded."
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v2.0/retentions/{id}/executions/{eid}",
+      "operationId": "operateRetentionExecution",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Retention policy writes and executions are excluded. Metadata and get are mapped."
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v2.0/robots/{robot_id}",
+      "operationId": "RefreshSec",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_robots",
+      "action": "refresh_secret",
+      "write": true,
+      "destructive": true,
+      "summary": "Refresh a robot secret. The new secret is shown once."
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v2.0/scanners/{registration_id}",
+      "operationId": "setScannerAsDefault",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Scanner registration, including credentials, is excluded."
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/export/cve",
+      "operationId": "exportScanData",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "CVE export jobs and binary downloads are excluded."
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/labels",
+      "operationId": "CreateLabel",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_admin",
+      "action": "label_create",
+      "write": true,
+      "destructive": false,
+      "summary": "Create a label."
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/ldap/ping",
+      "operationId": "pingLdap",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "LDAP administration is excluded from the management toolset."
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/ldap/users/import",
+      "operationId": "importLdapUser",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "LDAP administration is excluded from the management toolset."
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/p2p/preheat/instances",
+      "operationId": "CreateInstance",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "P2P preheat instance administration is excluded."
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/p2p/preheat/instances/ping",
+      "operationId": "PingInstances",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "P2P preheat instance administration is excluded."
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/projects",
+      "operationId": "createProject",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_projects",
+      "action": "create",
+      "write": true,
+      "destructive": false,
+      "summary": "Create a project."
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/projects/{project_name_or_id}/immutabletagrules",
+      "operationId": "CreateImmuRule",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Immutable tag rule administration is excluded from lean coverage."
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/projects/{project_name_or_id}/members",
+      "operationId": "createProjectMember",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_projects",
+      "action": "members_add",
+      "write": true,
+      "destructive": false,
+      "summary": "Add a project member."
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/projects/{project_name_or_id}/metadatas/",
+      "operationId": "addProjectMetadatas",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_projects",
+      "action": "metadata_add",
+      "write": true,
+      "destructive": false,
+      "summary": "Add project metadata."
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/projects/{project_name_or_id}/webhook/policies",
+      "operationId": "CreateWebhookPolicyOfProject",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Webhook policy writes, executions, jobs, and logs are excluded. List and events are mapped."
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/projects/{project_name}/preheat/policies",
+      "operationId": "CreatePolicy",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Project P2P preheat policies and executions are excluded."
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/projects/{project_name}/preheat/policies/{preheat_policy_name}",
+      "operationId": "ManualPreheat",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Project P2P preheat policies and executions are excluded."
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/projects/{project_name}/repositories/{repository_name}/artifacts",
+      "operationId": "CopyArtifact",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Copy-artifact, scan-stop, report logs, and generic additions are excluded. Core artifact calls are mapped."
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/projects/{project_name}/repositories/{repository_name}/artifacts/{reference}/labels",
+      "operationId": "addLabel",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_artifacts",
+      "action": "label_add",
+      "write": true,
+      "destructive": false,
+      "summary": "Attach a label to an artifact."
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/projects/{project_name}/repositories/{repository_name}/artifacts/{reference}/scan",
+      "operationId": "scanArtifact",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_artifacts",
+      "action": "scan",
+      "write": true,
+      "destructive": false,
+      "summary": "Trigger a vulnerability scan on an artifact."
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/projects/{project_name}/repositories/{repository_name}/artifacts/{reference}/scan/stop",
+      "operationId": "stopScanArtifact",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Copy-artifact, scan-stop, report logs, and generic additions are excluded. Core artifact calls are mapped."
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/projects/{project_name}/repositories/{repository_name}/artifacts/{reference}/tags",
+      "operationId": "createTag",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_artifacts",
+      "action": "tag_create",
+      "write": true,
+      "destructive": false,
+      "summary": "Create a tag on an artifact."
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/registries",
+      "operationId": "createRegistry",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Replication registry credentials are excluded."
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/registries/ping",
+      "operationId": "pingRegistry",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Replication registry credentials are excluded."
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/replication/executions",
+      "operationId": "startReplication",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Replication policies and executions are excluded. They involve remote registries."
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/replication/policies",
+      "operationId": "createReplicationPolicy",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Replication policies and executions are excluded. They involve remote registries."
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/retentions",
+      "operationId": "createRetention",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Retention policy writes and executions are excluded. Metadata and get are mapped."
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/retentions/{id}/executions",
+      "operationId": "triggerRetentionExecution",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Retention policy writes and executions are excluded. Metadata and get are mapped."
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/robots",
+      "operationId": "CreateRobot",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_robots",
+      "action": "create",
+      "write": true,
+      "destructive": false,
+      "summary": "Create a robot account. secret is shown once."
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/roles",
+      "operationId": "CreateRole",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "RBAC role catalog administration is excluded."
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/scanners",
+      "operationId": "createScanner",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Scanner registration, including credentials, is excluded."
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/scanners/ping",
+      "operationId": "pingScanner",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Scanner registration, including credentials, is excluded."
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/system/gc/schedule",
+      "operationId": "createGCSchedule",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_admin",
+      "action": "gc_schedule_create",
+      "write": true,
+      "destructive": true,
+      "summary": "Create or run a garbage collection schedule."
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/system/oidc/ping",
+      "operationId": "pingOIDC",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "OIDC ping and identity-provider administration are excluded."
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/system/purgeaudit/schedule",
+      "operationId": "createPurgeSchedule",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Audit log purge jobs are excluded from lean coverage."
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/system/scanAll/schedule",
+      "operationId": "createScanAllSchedule",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Instance-wide scan-all schedule and stop are excluded. Per-artifact scan is mapped."
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/system/scanAll/stop",
+      "operationId": "stopScanAll",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Instance-wide scan-all schedule and stop are excluded. Per-artifact scan is mapped."
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/usergroups",
+      "operationId": "createUserGroup",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "User group administration is excluded."
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2.0/users",
+      "operationId": "createUser",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "User directory, password, CLI secret, and sysadmin writes are excluded. current user is mapped."
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/configurations",
+      "operationId": "updateConfigurations",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "System configuration get/update is excluded. It exposes and writes instance secrets."
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/jobservice/jobs/{job_id}",
+      "operationId": "stopRunningJob",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Jobservice worker, queue, and job-stop administration is excluded."
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/jobservice/queues/{job_type}",
+      "operationId": "actionPendingJobs",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Jobservice worker, queue, and job-stop administration is excluded."
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/labels/{label_id}",
+      "operationId": "UpdateLabel",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_admin",
+      "action": "label_update",
+      "write": true,
+      "destructive": false,
+      "summary": "Update a label."
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/p2p/preheat/instances/{preheat_instance_name}",
+      "operationId": "UpdateInstance",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "P2P preheat instance administration is excluded."
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/projects/{project_name_or_id}",
+      "operationId": "updateProject",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_projects",
+      "action": "update",
+      "write": true,
+      "destructive": false,
+      "summary": "Update a project."
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/projects/{project_name_or_id}/immutabletagrules/{immutable_rule_id}",
+      "operationId": "UpdateImmuRule",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Immutable tag rule administration is excluded from lean coverage."
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/projects/{project_name_or_id}/members/{mid}",
+      "operationId": "updateProjectMember",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_projects",
+      "action": "member_update",
+      "write": true,
+      "destructive": false,
+      "summary": "Update a project member role."
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/projects/{project_name_or_id}/metadatas/{meta_name}",
+      "operationId": "updateProjectMetadata",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_projects",
+      "action": "metadata_update",
+      "write": true,
+      "destructive": false,
+      "summary": "Update one project metadata entry."
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/projects/{project_name_or_id}/scanner",
+      "operationId": "setScannerOfProject",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Per-project scanner assignment is excluded. Scanner registration is also excluded."
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/projects/{project_name_or_id}/webhook/policies/{webhook_policy_id}",
+      "operationId": "UpdateWebhookPolicyOfProject",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Webhook policy writes, executions, jobs, and logs are excluded. List and events are mapped."
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/projects/{project_name}/preheat/policies/{preheat_policy_name}",
+      "operationId": "UpdatePolicy",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Project P2P preheat policies and executions are excluded."
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/projects/{project_name}/repositories/{repository_name}",
+      "operationId": "updateRepository",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_repositories",
+      "action": "update",
+      "write": true,
+      "destructive": false,
+      "summary": "Update repository description."
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/quotas/{id}",
+      "operationId": "updateQuota",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Quota writes are excluded. Quota list and get are mapped."
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/registries/{id}",
+      "operationId": "updateRegistry",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Replication registry credentials are excluded."
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/replication/executions/{id}",
+      "operationId": "stopReplication",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Replication policies and executions are excluded. They involve remote registries."
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/replication/policies/{id}",
+      "operationId": "updateReplicationPolicy",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Replication policies and executions are excluded. They involve remote registries."
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/retentions/{id}",
+      "operationId": "updateRetention",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Retention policy writes and executions are excluded. Metadata and get are mapped."
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/robots/{robot_id}",
+      "operationId": "UpdateRobot",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_robots",
+      "action": "update",
+      "write": true,
+      "destructive": false,
+      "summary": "Update a robot account."
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/roles/{role_id}",
+      "operationId": "UpdateRole",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "RBAC role catalog administration is excluded."
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/scanners/{registration_id}",
+      "operationId": "updateScanner",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Scanner registration, including credentials, is excluded."
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/system/CVEAllowlist",
+      "operationId": "putSystemCVEAllowlist",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "System CVE allowlist administration is excluded."
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/system/gc/{gc_id}",
+      "operationId": "stopGC",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Per-job GC stop and log endpoints are excluded. Schedule and history are mapped."
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/system/gc/schedule",
+      "operationId": "updateGCSchedule",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": false,
+      "tool": "harbor_admin",
+      "action": "gc_schedule_update",
+      "write": true,
+      "destructive": true,
+      "summary": "Update the garbage collection schedule."
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/system/purgeaudit/{purge_id}",
+      "operationId": "stopPurge",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Audit log purge jobs are excluded from lean coverage."
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/system/purgeaudit/schedule",
+      "operationId": "updatePurgeSchedule",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Audit log purge jobs are excluded from lean coverage."
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/system/scanAll/schedule",
+      "operationId": "updateScanAllSchedule",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "Instance-wide scan-all schedule and stop are excluded. Per-artifact scan is mapped."
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/usergroups/{group_id}",
+      "operationId": "updateUserGroup",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "User group administration is excluded."
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/users/{user_id}",
+      "operationId": "updateUserProfile",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "User directory, password, CLI secret, and sysadmin writes are excluded. current user is mapped."
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/users/{user_id}/cli_secret",
+      "operationId": "setCliSecret",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "User directory, password, CLI secret, and sysadmin writes are excluded. current user is mapped."
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/users/{user_id}/password",
+      "operationId": "updateUserPassword",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "User directory, password, CLI secret, and sysadmin writes are excluded. current user is mapped."
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v2.0/users/{user_id}/sysadmin",
+      "operationId": "setUserSysAdmin",
+      "sourceFile": "api/v2.0/swagger.yaml",
+      "exclude": true,
+      "reason": "User directory, password, CLI secret, and sysadmin writes are excluded. current user is mapped."
+    }
+  ]
+}
